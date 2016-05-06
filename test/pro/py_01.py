@@ -1,44 +1,4 @@
 # -*- coding: utf-8 -*-
-import math
-
-
-# 解二元一次方程
-def quadratic_equation(a, b, c):
-    if b * b - 4 * a * c >= 0:
-        d = math.sqrt(b * b - 4 * a * c)
-        return (-1 * b + d) / (2 * a), (-1 * b - d) / (2 * a)
-
-
-# print(quadratic_equation(2, 3, 0))
-
-
-# 函数的递归调用（汉诺塔问题）
-def move(n, a, b, c):
-    if n == 1:
-        print(a + "-->" + c)
-        return
-    move(n - 1, a, c, b)
-    print(a + "-->" + c)
-    move(n - 1, b, a, c)
-
-
-# move(4, 'A', 'B', 'C')
-
-
-# 可变参数
-def average(*args):
-    sum = 0
-    n = 0
-    for value in args:
-        sum += value
-        n += 1
-    if n == 0:
-        return 0.0
-    return 1.0 * sum / n
-
-
-# print(average())
-# print(average(1, 2, 3, 4))
 
 
 # 对 list 进行切片处理

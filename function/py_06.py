@@ -18,8 +18,8 @@ hello('Hello', *names)  # => greeting='Hello', args=('Bart', 'Lisa')
 
 
 # function: keyword arguments
-def print_scores(**kw):
-    for name, score in kw.items():
+def print_scores(**kwargs):
+    for name, score in kwargs.items():
         print('%10s %d' % (name, score))
 
 
