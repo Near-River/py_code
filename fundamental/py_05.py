@@ -31,6 +31,7 @@ x, y = move(100, 100, 60, math.pi / 6)
 print(x, y)
 
 print(my_abs(-20))
-# TypeError: bad operand type:
-my_abs('123')
-# abs('123')
+
+
+# TypeError: bad operand type: str
+# my_abs('123')
