@@ -18,7 +18,8 @@ print('R[::5] =', R[::5])
 
 # iterator (Iterable、Iterator)
 def g():
-    pass
+    yield 1
+    yield 2
 
 
 print('Iterable? [1, 2, 3]:', isinstance([1, 2, 3], Iterable))

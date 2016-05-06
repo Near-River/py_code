@@ -19,6 +19,7 @@ for item in g:
     print(item)
 
 
+# generator function
 def fib(n):  # creation method 2
     i, a, b = 0, 0, 1
     while i < n:
