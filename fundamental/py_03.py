@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 # if - elif - else
 age = int(input('Input your age: '))
 if age >= 18:
