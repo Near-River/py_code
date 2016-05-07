@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import math
 
+
 # call function
 x = abs(100)
 y = abs(-20)
