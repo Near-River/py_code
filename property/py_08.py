@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 # iter list:
 print('for x in [1, 2, 3, 4, 5]:')
 for x in [1, 2, 3, 4, 5]:  # for x in iter([1, 2, 3, 4, 5])

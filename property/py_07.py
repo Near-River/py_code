@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from collections import Iterable, Iterator
 
+
 L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
 
 # slice
