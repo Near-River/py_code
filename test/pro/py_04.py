@@ -41,7 +41,7 @@ else:
 
 # try_finally使用. finally 代码段总是会被执行，为异常处理事件提供清理机制
 try:
-    f1 = open('py_01.py')
+    f1 = open('py_03.py')
     line = f1.read(2)
     print(line)
 except IOError as error:

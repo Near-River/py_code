@@ -10,6 +10,8 @@ elif age >= 6:
 else:
     print('kid')
 
+m = 'good' if 2 > 3 else 'bad'
+print(m)
 
 # for loop
 names = ['Michael', 'Bob', 'Tracy']
