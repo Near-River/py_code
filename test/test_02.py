@@ -19,7 +19,6 @@ def triangles(n):
         i += 1
     return L
 
-
 t = triangles(10)
 print(t)
 for item in t:

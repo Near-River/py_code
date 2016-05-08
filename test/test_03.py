@@ -5,8 +5,6 @@ from functools import reduce
 
 
 # 函数调用时间的性能测试
-
-
 def performance(f):
     @functools.wraps(f)
     def wrapper(*args, **kwargs):

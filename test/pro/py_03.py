@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
 import types
-from os.path import isdir, isfile
-from logging import log as logger  # 给函数起个“别名”来避免冲突
-from math import log
-
-log(10)
-logger(10, 'import from logging')
-print(isdir('D:/util'), isfile('D:/util'))
-
-print(json.dumps({'Name': 'Near', 'Age': 21}))
 
 
 # 定义类

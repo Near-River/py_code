@@ -1,29 +1,4 @@
 #############################################################################
-class Fib(object):
-    def __init__(self, num):
-        self.num = num
-        a, b, L = 0, 1, []
-        L.append(a)
-        for i in range(1, num):
-            c = a + b
-            a = b
-            b = c
-            L.append(a)
-        Fib.nums = L
-
-    def __str__(self):
-        return str(Fib.nums)
-
-    def __len__(self):
-        return len(Fib.nums)
-
-
-f = Fib(10)
-print(f)
-print(len(f))
-
-
-#############################################################################
 class Rational(object):
     def __init__(self, p, q):
         self.p = p

@@ -8,7 +8,6 @@ def quadratic_equation(a, b, c):
         d = math.sqrt(b * b - 4 * a * c)
         return (-1 * b + d) / (2 * a), (-1 * b - d) / (2 * a)
 
-
 # print(quadratic_equation(2, 3, 0))
 
 
