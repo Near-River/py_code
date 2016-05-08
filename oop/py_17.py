@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-# access permission
+# access permission:
 class Student(object):
 
     def __init__(self, name, score):

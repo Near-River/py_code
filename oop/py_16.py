@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-# class     instance
+# class    instance
 class Student(object):
 
     def __init__(self, name, score):

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-# inheritance   polymorphism
+# inheritance    polymorphism
 class Animal(object):
     def run(self):
         print('Animal is running...')

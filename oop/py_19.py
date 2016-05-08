@@ -6,6 +6,7 @@ import types
 # obtain the object info:
 def fn():
     pass
+
 print(type(fn) == types.FunctionType)
 print(type(abs) == types.BuiltinFunctionType)
 print(type(lambda x: x) == types.LambdaType)

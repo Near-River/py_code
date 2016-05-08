@@ -10,6 +10,7 @@ class Student(object):
 class GraduateStudent(Student):
     pass
 
+
 s = Student()
 s.name = 'Michael'
 s.age = 25
