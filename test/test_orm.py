@@ -87,5 +87,4 @@ if __name__ == '__main__':
     u = User(id=101, name='Admin', email='admin@server.com', password='admin')
     u.save()
     # print('model mappings: ', u.__mappings__)
-    # print('table name: ', u.__table__)
     # print(u)
