@@ -92,6 +92,7 @@ Python的 decorator 本质上就是一个高阶函数，它接收一个函数作
         特殊方法定义在class中、不需要直接调用、python 的某些函数或操作符会调用对应的特殊方法
         限制实例在运行时动态添加属性：__slots__
         类型转换：__int__、__float__ ...
+    在没有找到属性的情况下，才调用__getattr__，已有的属性，不会在__getattr__中查找。
 错误和异常：
     try-except及else的使用、try-finally使用
     with语句与上下文管理：with语句实质是上下文管理
