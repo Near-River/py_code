@@ -5,20 +5,8 @@ import os
 import sys
 from setuptools.compat import unicode
 
-# 文件打开 open(name, mode, buf)
-#   读写方式打开：r+ / w+  追加和读写方式打开：a+
-#   二进制方式打开：加后缀'b'
-
-try:
-    f = open('D:/demo/123.txt', 'a+')
-    # print(f)
-    # print(type(f))
-except IOError as error:
-    f.close()
 
 # 文件读取方式：
-#   read([size])：读取size个字节，默认读取全部字节
-#   readline([size])：读取一行
 #   readlines([size])：读取由默认缓冲大小的字节数所组成的行，返回每一行所组成的列表
 #         size : io.DEFAULT_BUFFER_SIZE
 #   iter：使用迭代器读取文件
