@@ -3,7 +3,8 @@
 import os, time, random
 from multiprocessing import Process, Queue
 
-# Inter-process Communication: Queue & Pipes
+
+# Inter-Process Communication: Queue & Pipes
 def write(q):
     print('Process to write: %s' % os.getpid())
     for value in ['A', 'B', 'C']:
