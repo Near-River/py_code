@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from collections import namedtuple, deque, defaultdict, OrderedDict, Counter
+import base64
 
 
-# build-in:
+# build-in: base64
+s = base64.b64encode('Administrator'.encode('utf-8'))
+print(s)
+d = base64.b64decode(s).decode('utf-8')
+print(d)
+
+
+# replace the character '+' and '/' with '-' and '_'
+s = base64.urlsafe_b64encode('Administrator'.encode('utf-8'))
+print(s)
+d = base64.urlsafe_b64decode(s).decode('utf-8')
+print(d)
