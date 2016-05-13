@@ -31,19 +31,11 @@ class WeatherSaxHandler(object):
             for k, v in attrs.items():
                 self.weather[k] = v
 
-    def end_element(self, name):
-        pass
-
-    def character_data(self, text):
-        pass
-
 
 def parse_weather(xml):
     sax_handler = WeatherSaxHandler()
     parser = ParserCreate()
     parser.StartElementHandler = sax_handler.start_element
-    parser.EndElementHandler = sax_handler.end_element
-    parser.CharacterDataHandler = sax_handler.character_data
     parser.Parse(xml)
     return sax_handler.weather
 
