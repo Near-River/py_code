@@ -6,7 +6,7 @@ from multiprocessing import freeze_support
 
 # Distributed Process: Master
 task_queue = queue.Queue()  # the queue used to send task
-result_queue = queue.Queue()  # the queue used to achieve result
+result_queue = queue.Queue()  # the queue used to accept result
 
 
 class QueueManager(BaseManager):

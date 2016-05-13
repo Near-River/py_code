@@ -19,7 +19,7 @@ def work():
     worker.connect()
     task = worker.get_task_queue()
     result = worker.get_result_queue()
-    # do calculate job
+    # distributed calculation
     for i in range(10):
         try:
             n = task.get(i)
