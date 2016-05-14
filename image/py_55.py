@@ -21,7 +21,7 @@ def rndColor2():
 
 
 def drawImage():
-    # 240 x 60:
+    # 240 x 80:
     width, height = 60 * 4, 80
     image = Image.new('RGB', (width, height), (255, 255, 255))
     # create Font object
