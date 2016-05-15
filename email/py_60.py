@@ -18,6 +18,7 @@ def guess_charset(msg):
 
 
 def decode_str(s):
+    """ s: Header object """
     value, charset = decode_header(s)[0]
     if charset:
         value = value.decode(charset)
@@ -42,7 +43,7 @@ def print_info(msg, indent=0):
         for n, part in enumerate(parts):
             print('%spart %s' % ('  ' * indent, n))
             print('%s--------------------' % ('  ' * indent))
-            print_info(part, indent+1)
+            print_info(part, indent + 1)
     else:
         content_type = msg.get_content_type()
         print('content-type', content_type)
@@ -57,9 +58,9 @@ def print_info(msg, indent=0):
 
 
 def handler():
-    email = 'yangxiaonear@sina.com'
-    password = 'yangxiao'
-    pop3_server = 'pop.sina.com'
+    email = input('Email: ')
+    password = input('Password: ')
+    pop3_server = input('Pop3 Server: ')
 
     # connect to POP3 server
     server = poplib.POP3(pop3_server)
@@ -81,7 +82,7 @@ def handler():
     resp, lines, octets = server.retr(index)
     msg_content = b'\r\n'.join(lines).decode('utf-8')
     # parser out the Message object
-    msg = Parser().parsestr(msg_content)    # obtain an Message object
+    msg = Parser().parsestr(msg_content)  # obtain an Message object
 
     print_info(msg)
 
