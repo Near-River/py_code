@@ -15,6 +15,7 @@ class Application(Frame):
         self.nameEntry = Entry(self)
         # self.exitButton = Button(self, text='Exit', command=self.quit)
         self.triggerButton = Button(self, text='Click', command=self.sayHello)
+
         self.createWidgets()
 
     def createWidgets(self):
