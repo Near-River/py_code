@@ -52,7 +52,12 @@ def post():
 
 
 def proxy():
-    pass
+    proxy_handler = request.ProxyHandler({'http': 'http://www.example.com:6666/'})
+    proxy_auth_handler = urllib.request.ProxyBasicAuthHandler()
+    proxy_auth_handler.add_password('realm', 'host', 'username', 'password')
+    opener = request.build_opener(proxy_handler, proxy_auth_handler)
+    with opener.open('http://www.example.com/login.html') as f:
+        pass
 
 
 if __name__ == '__main__':
