@@ -4,12 +4,11 @@ import asyncio
 import threading
 
 
-# asyncio: syntax for <= 3.4
-@asyncio.coroutine
-def hello(name):
+# asyncio: syntax for 3.5
+async def hello(name):
     print('hello, %s. %s' % (name, threading.current_thread().name))
     # call another coroutine
-    yield from asyncio.sleep(1)
+    await asyncio.sleep(1)
     print('hello, %s. %s' % (name, threading.current_thread().name))
 
 
