@@ -27,8 +27,8 @@ def post():
     print('Login to weibo')
     # username = input('Email: ')
     # password = input('Password: ')
-    username = '18862110936'
-    password = 'waxtybz19930922'
+    username = input('Phone Number: ')
+    password = input('password: ')
     login_data = parse.urlencode([
         ('username', username),
         ('password', password),
