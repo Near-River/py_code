@@ -16,7 +16,9 @@ class Dict(dict):
         self[key] = value
 
 
-# d = Dict(a=1, b=2, c=3)
-# print(d.a)
-# print(d['b'])
-# print(getattr(d, 'c'))
+if __name__ == '__main__':
+    d = Dict(a=1, b=2, c=3)
+    print(d.a)
+    print(d['b'])
+    print(getattr(d, 'c'))
+    # print(getattr(d, 'd'))

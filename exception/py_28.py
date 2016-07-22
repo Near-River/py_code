@@ -14,7 +14,7 @@ def bar():
     try:
         foo('0')
     except ValueError as e:
-        print('ValueError!')
+        print('ValueError!', e)
         raise
 
 
