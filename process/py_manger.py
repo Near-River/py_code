@@ -22,8 +22,6 @@ def get_result_queue():
 
 
 def run():
-    # QueueManager.register('get_task_queue', callable=lambda :task_queue)
-    # QueueManager.register('get_result_queue', callable=lambda: result_queue)
     QueueManager.register('get_task_queue', callable=get_task_queue)
     QueueManager.register('get_result_queue', callable=get_result_queue)
 
