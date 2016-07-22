@@ -15,7 +15,7 @@ def log(func):
 
 @log
 def now():
-    print('2015-3-25')
+    print('2016-4-25')
 
 now()
 

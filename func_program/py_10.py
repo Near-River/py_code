@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from functools import reduce
 
-# functional programming 1: map()   reduce(0
+# functional programming 1: map()   reduce()
 CHAR_TO_INT = {
     '0': 0,
     '1': 1,
