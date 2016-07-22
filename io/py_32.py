@@ -4,7 +4,7 @@ from io import StringIO, BytesIO
 
 
 # IO 2: StringIO & BytesIO
-def stringIO():
+def testStringIO():
     # write to StringIO:
     f = StringIO()
     f.write('hello')
@@ -21,7 +21,7 @@ def stringIO():
         print(s.strip())
 
 
-def bytesIO():
+def testBytesIO():
     # write to BytesIO:
     f = BytesIO()
     f.write(b'hello')
@@ -30,11 +30,11 @@ def bytesIO():
     print(f.getvalue())
 
     # read from BytesIO:
-    data = 'ABCDEFG'.encode('utf-8')
+    data = '中国'.encode('utf-8')
     f = BytesIO(data)
     print(f.read())
 
 
 if __name__ == '__main__':
-    # stringIO()
-    bytesIO()
+    # testStringIO()
+    testBytesIO()

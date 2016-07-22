@@ -13,14 +13,13 @@ def writeFile():
 def readFile():
     with open('demo.txt', 'r', encoding='utf-8', errors='ignore') as f:
         s = f.read()
-        print('open for read...')
         print(s)
 
 
 def readBinaryFile():
     with open('cat.jpg', 'rb') as f:
         s = f.read()
-        print('open as binary for read...')
+        print('open as binary data for reading...')
         print(s)
 
 
