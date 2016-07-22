@@ -14,7 +14,7 @@ print('d[\'Tracy\'] =', d['Tracy'])
 print('d.get(\'Thomas\', -1) =', d.get('Thomas', -1))
 
 
-# list: union   intersection    difference
+# set: union   intersection    difference
 s1 = {1, 1, 2, 2, 3, 3}
 s2 = {2, 3, 4}
 print(s1, s2)
