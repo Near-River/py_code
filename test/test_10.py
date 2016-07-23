@@ -5,7 +5,7 @@ from threading import Thread
 
 
 # 模拟多线程并发抓取
-# q是任务队列    NUM是并发线程总数  JOBS是有多少任务
+# q是任务队列    NUM是并发线程总数  JOBS是任务数
 q, NUM, JOBS = Queue(), 3, 10
 
 

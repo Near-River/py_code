@@ -17,7 +17,7 @@ def triangles(n):
             L = temp
         yield L
         i += 1
-    return L
+
 
 t = triangles(10)
 print(t)

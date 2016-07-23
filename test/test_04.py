@@ -6,7 +6,7 @@
 #     def __init__(self, num):
 #         self.num = num
 #         a, b, L = 0, 1, []
-#         for i in range(1, num+1):
+#         for i in range(1, self.num+1):
 #             a, b = b, a+b
 #             L.append(a)
 #         Fib.nums = L
@@ -32,7 +32,7 @@ class Fib(object):  # 改进版
         return self
 
     def __next__(self):
-        self._a, self._b = self._b, self._a+self._b
+        self._a, self._b = self._b, self._a + self._b
         if self.__count__ >= self.num:
             raise StopIteration
         self.__count__ += 1

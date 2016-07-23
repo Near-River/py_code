@@ -28,6 +28,7 @@ class IntegerField(Field):
 class ModelMetaClass(type):
     def __new__(cls, name, bases, attrs):
         if name == 'Model':
+            print('Found class model')
             return type.__new__(cls, name, bases, attrs)
         print('Found model: %s' % name)
         mappings = dict()
@@ -43,8 +44,8 @@ class ModelMetaClass(type):
 
 
 class Model(dict, metaclass=ModelMetaClass):
-    def __init__(self, **kwargs):
-        super(Model, self).__init__(**kwargs)
+    def __init__(self, **kw):
+        super(Model, self).__init__(**kw)
 
     def __getattr__(self, key):
         try:
@@ -60,7 +61,7 @@ class Model(dict, metaclass=ModelMetaClass):
         params = []
         args = []
         for k, v in self.__mappings__.items():
-            fields.append(v.name)
+            fields.append(v.name)   # v instance of Field
             params.append('?')
             args.append(getattr(self, k, None))
         sql = 'insert into %s (%s) values (%s)' % (self.__table__, ','.join(fields), ','.join(params))
@@ -74,9 +75,9 @@ class User(Model):
     email = StringField('email')
     password = StringField('password')
 
-    def __init__(self, **kwargs):
-        super(User, self).__init__(**kwargs)
-        for k, v in kwargs.items():
+    def __init__(self, **kw):
+        super(User,self).__init__(**kw)
+        for k, v in kw.items():
             setattr(self, k, v)
 
     def __str__(self):

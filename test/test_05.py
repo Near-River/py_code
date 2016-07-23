@@ -19,9 +19,9 @@ class Rational(object):
         return Rational(self.p * r.q, self.q * r.p)
 
     def __str__(self):
-        min_ = min(self.p, self.q)
-        max_ = max(self.p, self.q)
-        g = gcd(min_, max_)
+        _min = min(self.p, self.q)
+        _max = max(self.p, self.q)
+        g = gcd(_min, _max)
         if self.p / g == 0:
             return '%d' % 0
         if self.q / g == 1:

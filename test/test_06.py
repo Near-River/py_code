@@ -18,4 +18,4 @@ class Chain(object):
 
 
 print(Chain().user.delete)
-print(Chain().users('Nate_River').repos)
+print(Chain().users('Nate_River').repository)
