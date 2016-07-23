@@ -24,7 +24,8 @@ def login():
     password = request.form['password']
     if username == 'admin' and password == 'admin':
         return '<h3>Hello, Admin!</h3>'
-    return render_template('login.html', message='Username or password is incorrect.', username=username)
+    data = dict(message='Username or password is incorrect.', username=username)
+    return render_template('login.html', **data)
 
 
 if __name__ == '__main__':

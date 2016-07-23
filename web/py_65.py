@@ -3,7 +3,6 @@
 from flask import Flask
 from flask import request
 
-
 # Flask: web framework
 app = Flask(__name__)
 
@@ -16,7 +15,7 @@ def home():
 @app.route('/login', methods=['GET'])
 def login_form():
     return '''<form action="/login" method="post">
-              <p><input name="username"></p>
+              <p><input name="username" type="text"></p>
               <p><input name="password" type="password"></p>
               <p><button type="submit">Sign In</button></p>
               </form>'''
@@ -25,7 +24,7 @@ def login_form():
 @app.route('/login', methods=['POST'])
 def login():
     # Access form parameters from request：
-    if request.form['username']=='admin' and request.form['password']=='admin':
+    if request.form['username'] == 'admin' and request.form['password'] == 'admin':
         return '<h3>Hello, Admin!</h3>'
     return '<h3>Bad username or password.</h3>'
 
