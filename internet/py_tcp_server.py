@@ -14,7 +14,7 @@ def serve():
     while True:
         # accept a new connection
         sock, addr = s.accept()
-        t = Thread(tcp_link(sock, addr))
+        t = Thread(target=tcp_link(sock, addr))
         t.start()
     # close the connection
     s.close()

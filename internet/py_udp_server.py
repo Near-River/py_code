@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import socket
-from threading import Thread
 
 
 # UDP: Server
@@ -11,6 +10,7 @@ def serve():
     s.bind(('127.0.0.1', 8888))
     print('Bind UDP on 8888...')
     udp_link(s)
+    s.close()
 
 
 def udp_link(sock):
